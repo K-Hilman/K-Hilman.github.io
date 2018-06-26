@@ -1,0 +1,115 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<script src="jquery-3.3.1.min.js"></script>
+	<script src="jquery.tiltedpage-scroll.js"></script>
+	
+	
+<title>Acknowledgement
+	</title>
+	
+<style>
+	
+	
+	     * {
+				margin: 0;
+				padding: 0;
+			}
+			body {
+				font-family: Calibri, sans-serif;
+			}
+			.background-wrap {
+				position: fixed;
+				z-index: -1000;
+				width: 100%;
+				height: 100%;
+				overflow: hidden;
+				top: 0;
+				left: 0;
+			}
+			
+			#video-bg-elem {
+				position: absolute;
+				top: 0;
+				left: 0;
+				min-height: 100%;
+				min-width: 100%;
+			}
+			.content {
+				position: absolute;
+				width: 100%;
+				min-height: 100%;
+				z-index: 1000;
+				background-color: rgba(0,0,0,0.7);
+			}
+	
+	#header {
+	background-color: #2D2B2B;
+	opacity: 0.9;
+	text-align: center;
+	height: 15vw;
+	font-size: 3vw;
+	letter-spacing: 3px;
+	color: #FCFCFC;
+	padding-bottom: 0vw;
+	padding-top: 0vw;
+		}
+	
+	.main {
+		
+		
+	}
+	</style>
+<link href="tiltedpage-scroll.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	
+	<header id="header"> Much of what I achieved today <br> would not be possible <br>
+		without the support <br>
+		of my loved ones 
+	
+	</header>
+	
+	<div class="main">
+		
+  <section class="page1">
+    <img src="../../ALL_IMAGES/BACKGROUNDS/islamic_wallpaper.png" width="100%">
+  </section>
+		
+  <section class="page2">
+    <img src="../../ALL_IMAGES/BACKGROUNDS/dark2m.png" width="100%">
+	  
+  </section>
+  
+  <section class="last-page">
+    ...
+  </section>
+</div>
+	
+	<div class="background-wrap">
+			<video id="video-bg-elem" preload="auto" autoplay="true" loop="loop" muted="muted"> 
+				<source src="../../ALL_IMAGES/BACKGROUNDS/Animated/glimmering.MP4" width="1000" type="video/mp4">
+				Video not supported
+			</video>          
+		</div>
+	
+	
+	
+	
+<script>
+	
+ $(".main").tiltedpage_scroll({
+    sectionContainer: "> section",     // In case you don't want to use <section> tag, you can define your won CSS selector here
+    angle: 50,                         // You can define the angle of the tilted section here. Change this to false if you want to disable the tilted effect. The default value is 50 degrees.
+    opacity: true,                     // You can toggle the opacity effect with this option. The default value is true
+    scale: false,                       // You can toggle the scaling effect here as well. The default value is true.
+    outAnimation: true                 // In case you do not want the out animation, you can toggle this to false. The defaul value is true.
+  });
+	
+	</script>
+</body>
+</html>

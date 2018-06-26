@@ -1,0 +1,313 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Menu</title>
+	
+<script src="jquery-3.3.1.min.js"></script>
+	
+	
+	
+	<style>	
+		
+		* {
+				margin: 0;
+				padding: 0;
+			}
+		
+				a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:active {
+    text-decoration: none;
+}
+	
+		
+			body {
+				font-family: Calibri, sans-serif;
+			
+			}
+		
+		.background-wrap {
+				position: fixed;
+				z-index: -1000;
+				width: 100%;
+				height: 100%;
+				overflow: hidden;
+				top: 0;
+				left: 0;
+			}
+			
+			#video-bg-elem {
+				position: absolute;
+				top: 0;
+				left: 0;
+				min-height: 100%;
+				min-width: 100%;
+		}
+		
+		
+		.button { 
+			position:absolute;
+	text-decoration: none;
+			display:inline
+		}
+		
+		
+		
+		
+	 .content {color: #FFFFFF;
+				position: absolute;
+				width: 100%;
+				min-height: 100%;
+				z-index: 1000;
+				background-color: rgba(0,0,0,0.7);
+				
+				}
+		
+		#assignment {
+	left: 4%;
+	top: 3%
+		}
+		
+		
+		#drOWeb {
+	left: 11%;
+	top: 60%;
+}
+		
+		#acknowledgement{
+	left: 40%;
+	top: 55%;
+		}
+		
+		#UITMWeb {
+	left: 71%;
+	top: 54%;
+		}
+		
+		#classList {
+	left: 83%;
+	top: 11%;
+		}
+		
+		#text {
+	position: absolute;
+	left: 43%;
+	top: 82%;
+	opacity: 0.5
+		}
+		
+		#home {
+	position: absolute;
+	left: 32%;
+	top: -7%
+		}
+		
+		#home:hover {
+			opacity: 0.5
+		}
+		
+    </style>
+</head>
+
+<body>
+	
+	
+
+<div class="content">
+	
+	<div class="button" id="assignment">
+		<a href="../Assignments/Assignments.html"> <img id="assignmentImg" src="../../ALL_IMAGES/BUTTONS/Assignments.png" width="15%" alt="Assignments">
+			
+	  </a>
+	</div>
+	
+	<div>
+		<a href="../../INDEX.html">
+			<img id="home" src="../../ALL_IMAGES/BUTTONS/PSD/Asset 3.png" width="40%" >
+		</a>
+	</div>
+	
+	<div class= "button" id="classList">
+		<a href="http://10.5.2.119/DrO/Classlist_EPC521_3Ci_MARCH2018.html" >
+	 <img src="../../ALL_IMAGES/BUTTONS/ClassList.png" width="55%" alt="Class List">
+		
+	  </a>
+	</div>
+		
+	
+  <div class="button" id="drOWeb">
+		
+		<a href="http://www.othmanismail.com">
+			<img id="drOWebImg" src="../../ALL_IMAGES/BUTTONS/professor.png" width="15%">
+		</a>
+  </div>
+	
+  <div class= "button" id="acknowledgement"> 
+	<h1> <a href="../Acknowledgement/Acknowledgement.html">
+		
+		<img src="../../ALL_IMAGES/BUTTONS/clive-thank-you.png" width="55%">
+		
+		</a>
+		
+		</h1>
+		</div> 
+	
+  <div class= "button" id="UITMWeb">
+		<a href="http://www.uitm.edu.my/index.php/en/">
+	 <img  src="../../ALL_IMAGES/BUTTONS/uitm-vector-logo.png" width="55%" alt="UITM's Website"/> 
+			
+			
+	  </a>
+	</div>
+	
+	
+  <div id= "text"></div>
+		
+</div>
+		
+	
+	
+	<div class="background-wrap">
+			<video id="video-bg-elem" preload="auto" autoplay="true" loop="loop" muted="muted"> 
+				<source src="../../ALL_IMAGES/BACKGROUNDS/Animated/Bokeh 2.MP4"
+						type="video/mp4">
+				Video not supported
+	  </video>          
+</div>
+	
+	<script>
+		$(document).ready(function(){
+		
+			
+	
+	$("#UITMWeb").hover(function(){
+	if (!$(this).hasClass('animated')) {
+		$(this).dequeue().stop().animate({ width: "+=5%","left":"-=6%","top":"-=9%" });
+	}
+}, function() {
+    $(this).addClass('animated').animate({ width: "-=5%","left":"+=6%","top":"+=9%" }, "normal", "linear", function() {
+		$(this).removeClass('animated').dequeue();
+	});
+});
+			
+		$("#classList").hover(function(){
+	if (!$(this).hasClass('animated')) {
+		$(this).dequeue().stop().animate({ width: "+=10%","left":"-=10%","top":"-=10%" });
+	}
+}, function() {
+    $(this).addClass('animated').animate({ width: "-=10%","left":"+=10%","top":"+=10%" }, "normal", "linear", function() {
+		$(this).removeClass('animated').dequeue();
+	});
+});
+			
+    $("#assignmentImg").mouseover(function(){
+        $("#assignment").css({ opacity: 0.5 });
+    });
+    $("#assignmentImg").mouseout(function(){
+        $("#assignment").css({opacity:1.0});
+    });
+			
+	$("#assignmentImg").hover(function(){
+	if (!$(this).hasClass('animated')) {
+		$(this).dequeue().stop().animate({ width: "+=5%", left:"+=3%", top:"-=10%"});
+	}
+}, function() {
+    $(this).addClass('animated').animate({ width: "-=5%", left:"-=3%", top:"+=10%"}, "normal", "linear", function() {
+		$(this).removeClass('animated').dequeue();
+	});
+});
+			
+
+    $("#drOWebImg").mouseover(function(){
+        $("#drOWeb").css({ opacity: 0.5 });
+    });
+    $("#drOWebImg").mouseout(function(){
+        $("#drOWeb").css({opacity:1.0});
+    });
+			
+	$("#drOWebImg").hover(function(){
+	if (!$(this).hasClass('animated')) {
+		$(this).dequeue().stop().animate({ width: "+=5%", left:"+=5%", top:"-=30%"});
+	}
+}, function() {
+    $(this).addClass('animated').animate({ width: "-=5%", left:"-=5%", top:"+=30%"}, "normal", "linear", function() {
+		$(this).removeClass('animated').dequeue();
+	});
+});
+			
+	
+
+
+    $("#acknowledgement").mouseover(function(){
+        $("#acknowledgement").css({ opacity: 0.5 });
+    });
+    $("#acknowledgement").mouseout(function(){
+        $("#acknowledgement").css({opacity:1.0});
+    });
+			
+	$("#acknowledgement").hover(function(){
+	if (!$(this).hasClass('animated')) {
+		$(this).dequeue().stop().animate({ width: "+=10%", left:"-=3%", top:"-=5%"});
+	}
+}, function() {
+    $(this).addClass('animated').animate({ width: "-=10%", left:"+=3%", top:"+=5%"}, "normal", "linear", function() {
+		$(this).removeClass('animated').dequeue();
+	});
+});
+
+    $("#UITMWeb").mouseover(function(){
+        $("#UITMWeb").css({ opacity: 0.5 });
+		
+		
+    });
+    $("#UITMWeb").mouseout(function(){
+        $("#UITMWeb").css({opacity:1.0});
+		
+    });
+			
+
+
+    $("#classList").mouseover(function(){
+        $("#classList").css({ opacity: 0.5 });
+    });
+    $("#classList").mouseout(function(){
+        $("#classList").css({opacity:1.0});
+    });
+			
+	$("#home").mouseover(function(){
+        $("#home").css({ opacity: 0.5 });
+    });
+    $("#home").mouseout(function(){
+        $("#home").css({opacity:1.0});
+    });
+			
+	$("#home").hover(function(){
+	if (!$(this).hasClass('animated')) {
+		$(this).dequeue().stop().animate({top:"-=5%"});
+	}
+}, function() {
+    $(this).addClass('animated').animate({top:"+=5%"}, "normal", "linear", function() {
+		$(this).removeClass('animated').dequeue();
+	});
+});
+			
+		});
+	
+			
+			
+	</script>
+						
+	
+</body>
+</html>
