@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LiQue:Learning Grammar</title>
+    <meta name="description" content="Learning grammar the fun way">
+    <link rel="stylesheet" href="main.css">
+
+    <script type='text/javascript' src='jquery.particleground.js'></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            particleground(document.getElementById('particles'), {
+                dotColor: '#4c6bd3',
+                lineColor: '#4c6bd3'
+            });
+            var intro = document.getElementById('intro');
+            intro.style.marginTop = -intro.offsetHeight / 2 + 'px';
+        }, false);
+
+    </script>
+    
+
+    <!--- FIREBASE UI--->
+    <script src="https://cdn.firebase.com/libs/firebaseui/3.6.0/firebaseui.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.6.0/firebaseui.css" />
+    
+    <script src="Firebase-auth.js"></script>
+
+
+
+
+</head>
+
+
+
+<body>
+
+    <div id="particles">
+        <div id="intro">
+            <h1>LiqueQuest</h1>
+            <p>A language learning application</p>
+            <div id="firebaseui-auth-container"></div>
+        </div>
+    </div>
+
+</body>
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/5.11.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#config-web-app -->
+
+<script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+        apiKey: "AIzaSyDFhjtTzRg466bZPhOTlu47dD3Onhj_P0M",
+        authDomain: "liqueapprentice.firebaseapp.com",
+        databaseURL: "https://liqueapprentice.firebaseio.com",
+        projectId: "liqueapprentice",
+        storageBucket: "liqueapprentice.appspot.com",
+        messagingSenderId: "599693877190",
+        appId: "1:599693877190:web:ec2c9e4b8a8dbe39"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+
+</script>
