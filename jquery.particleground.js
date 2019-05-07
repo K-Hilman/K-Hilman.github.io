@@ -86,8 +86,8 @@
       if (orientationSupport && !desktop) {
         window.addEventListener('deviceorientation', function () {
           // Contrain tilt range to [-30,30]
-          tiltY = Math.min(Math.max(-event.beta, -60), 60);
-          tiltX = Math.min(Math.max(-event.gamma, -60), 60);
+          tiltY = Math.min(Math.max(-event.beta, -90), 90);
+          tiltX = Math.min(Math.max(-event.gamma, -90), 90);
         }, true);
       }
 
