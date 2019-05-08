@@ -90,6 +90,7 @@ line-height: 1.3 ;
   color: #686dbc;
   border-color: #686dbc;
     font-size: 25px;
+    cursor: pointer;
 }
 
 .center {

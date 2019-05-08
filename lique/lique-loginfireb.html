@@ -39,10 +39,12 @@
             
             <h1> Lingua Quest</h1>
             <p> Learning grammar the fun way!</p>
+            <p style="display: inline-block" id="display-text"></p>
+            <p style="display: inline-block" id="user-email"></p>
             
-            <input id="txtEmail" type="email" placeholder="Email">
+            <input class="form" id="txtEmail" type="email" placeholder="Email">
             
-            <input id="txtPassword" type="password" placeholder="password">
+            <input class="form" id="txtPassword" type="password" placeholder="password">
             
             <div class="buttons">
             
@@ -52,13 +54,24 @@
             
             <button id="btnLogout" class="btn btn-action hide"> Log out </button>
                 
+            <a href="lique-introduction.html"><button id="btnStart" class="btn btn-action hide"> Start
+                
+                </button>
+                </a>
                 </div>
                     
             
         </div>
     </div>
     
-    <script src="app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.0/firebase-auth.js"></script>
+    
+    <script src="https://www.gstatic.com/firebasejs/6.0.0/firebase-firestore.js"></script>
+    
+    <script src="app.js">
+    
+    
+    </script>
     
 
 </body>

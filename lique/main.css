@@ -114,18 +114,18 @@ p {
        -o-transition: all 0.4s;
           transition: all 0.4;
 }
+
+
+
 .btn:hover {
-  color: #686dbc;
-  border-color: #686dbc;
+  color: #0b0d2a;
+  border-color: #0b0d2a;
     font-size: 21px;
+    cursor: pointer;
 }
 
-.hide {
-    
-    visibility: hidden;
-    display: block;
-    margin: auto;
-}
+
+
 
 @media only screen and (max-width: 1000px) {
   h1 {
@@ -168,3 +168,22 @@ p {
     height: 4px;
   }
 }
+
+.form {
+    font-size: 13px;
+    display: block;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*hide when not used*/
+
+.hide {
+    
+    display: none;
+    padding: 0;
+}
+
+
+
