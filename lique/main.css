@@ -68,6 +68,7 @@ h1 {
   font-size: 85px;
   font-weight: 700;
   letter-spacing: 0.015em;
+    text-align: center;
 }
 
 /*this is just to add the line*/
@@ -86,9 +87,20 @@ p {
   margin: 0 0 30px 0;
   font-size: 24px;
 }
+
+
+
+.buttons {
+    
+    margin: 20px;
+    padding: 20px;
+}
+
 .btn {
+    background-color: #6368b9;
   display: inline-block;
   padding: 15px 30px;
+    margin: 10px;
   border: 2px solid #fff;
   text-transform: uppercase;
   letter-spacing: 0.015em;
@@ -106,6 +118,13 @@ p {
   color: #686dbc;
   border-color: #686dbc;
     font-size: 21px;
+}
+
+.hide {
+    
+    visibility: hidden;
+    display: block;
+    margin: auto;
 }
 
 @media only screen and (max-width: 1000px) {
