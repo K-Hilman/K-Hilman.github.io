@@ -30,6 +30,11 @@ btnLogin.addEventListener('click', e => {
     //sign in
     const promise = auth.signInWithEmailAndPassword(email,pass);
     promise.catch(e => console.log(e.message));
+    
+    //Sign in validator
+    promise.catch(e => display_text.innerHTML =(e.message));
+    
+  
 });
 
 //create user TODO:Indicate to user that sign up is successfull
@@ -45,6 +50,9 @@ btnSignUp.addEventListener('click', e => {
    promise
     
        .catch(e => console.log(e.message));
+    
+    //Sign Up Validator
+    promise.catch(e => display_text.innerHTML =(e.message));
     
 });
 
@@ -77,6 +85,7 @@ firebase.auth().onAuthStateChanged(firebaseUser =>{
         user_email.innerHTML = "";
     }
     });
+
 
 //Firestore
 
