@@ -87,6 +87,9 @@ p {
   font-size: 24px;
 }
 .btn {
+    
+    margin-left: 10px;
+    margin-right: 10px;
   display: inline-block;
   padding: 15px 30px;
   border: 2px solid #fff;
@@ -149,3 +152,4 @@ p {
     height: 4px;
   }
 }
+
