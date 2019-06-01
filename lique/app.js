@@ -18,8 +18,10 @@ const btnLogin = document.getElementById('btnLogin');
 const btnSignUp = document.getElementById('btnSignUp');
 const btnLogout = document.getElementById('btnLogout');
 const btnStart = document.getElementById('btnStart');
+const btnAnon = document.getElementById('btnAnon');
 const user_email = document.getElementById("user-email");
 const display_text = document.getElementById("display-text");
+
 
 //login event TODO: Add sign/display the user is signed in
 btnLogin.addEventListener('click', e => {
@@ -48,11 +50,11 @@ btnSignUp.addEventListener('click', e => {
     const promise = auth.createUserWithEmailAndPassword(email,pass);
     
    promise
-    
        .catch(e => console.log(e.message));
     
     //Sign Up Validator
-    promise.catch(e => display_text.innerHTML =(e.message));
+    promise
+        .catch(e => display_text.innerHTML =(e.message));
     
 });
 
@@ -71,6 +73,7 @@ firebase.auth().onAuthStateChanged(firebaseUser =>{
         txtPassword.classList.add('hide');
         btnLogout.classList.remove('hide');
         btnStart.classList.remove('hide');
+        btnAnon.classList.add('hide')
         display_text.innerHTML = "Logged in as";
         user_email.innerHTML =  txtEmail.value;
     } else {
@@ -81,6 +84,7 @@ firebase.auth().onAuthStateChanged(firebaseUser =>{
         txtPassword.classList.remove('hide');
         btnLogout.classList.add('hide');
         btnStart.classList.add('hide');
+        btnAnon.classList.remove('hide')
         display_text.innerHTML = "";
         user_email.innerHTML = "";
     }
